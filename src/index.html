@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deck</title>
+    <style>
+      h1 {
+        color: rgb(3, 3, 3);
+        text-align: center;
+        text-decoration: underline;
+      }
+      label {
+        font-weight: normal;
+        font-size: large;
+      }
+      button {
+        padding: 1em 1.2em;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        background-color: rgb(51, 51, 51);
+        border: none;
+        border-radius: 5px;
+      }
+      select {
+        font-weight: bold;
+        border-radius: 2px;
+        font-size: 14px;
+        height: 30px;
+        width: 100px;
+      }
+      textarea {
+        height: 250px;
+        width: 300px;
+      }
+      div {
+        background-color: rgb(169, 165, 165);
+        border: solid;
+        text-align: center;
+        margin: 5%;
+        padding: 5%;
+        width: 25%;
+        margin-left: 35%;
+      }
+      input {
+        font-weight: bold;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Deck</h1>
+    <div>
+      <section>
+        <h2>Deck type selection</h2>
+        <form id="deckSelection">
+          <select name="availableDecks">
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+          </select>
+          <input type="submit" value="Create Deck" />
+          <input type="button" value="Shuffle Deck" id="btnMezclar" />
+        </form>
+      </section>
+
+      <section>
+        <h2>Current Deck</h2>
+        <textarea id="currentCardsInDeck"></textarea>
+
+        <form id="cardsAddition">
+          <h3>Add new card</h3>
+          <select name="availableSuits"></select>
+
+          <select name="availableValues"></select>
+
+          <input type="submit" value="Add Card" />
+        </form>
+
+        <form id="cardsRemoval">
+          <h3>Remove existing card</h3>
+          <select name="availableCardsToRemove"></select>
+
+          <input type="submit" value="Remove Card" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
